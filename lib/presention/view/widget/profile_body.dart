@@ -14,7 +14,7 @@ class ProfileBody extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           child: Text(
-            'Mohamed Acdelbaky',
+            'Mohamed Abdelbaky',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: const Color(0xff2A2B2E),

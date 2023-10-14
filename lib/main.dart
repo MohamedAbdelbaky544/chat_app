@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'presention/view/auth/login_screen.dart';
+
 void main() {
   runApp(const ChatApp());
 }
@@ -16,6 +18,7 @@ class ChatApp extends StatelessWidget {
       builder: ((context, child) {
         return const MaterialApp(
           debugShowCheckedModeBanner: false,
+          home: LoginScreen(),
         );
       }),
     );
