@@ -124,7 +124,6 @@ class ProfileBody extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(vertical: 10.h),
           child: CutomButton(
-            color: const Color(0xffDC3545),
             text: 'Log out',
             onPressed: () {},
           ),

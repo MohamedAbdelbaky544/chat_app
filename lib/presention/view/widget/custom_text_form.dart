@@ -11,6 +11,7 @@ class CustomTextForm extends StatelessWidget {
     required this.onChanged,
     this.readOnly = false,
     this.suffixIcon = const SizedBox.shrink(),
+    this.obscureText = false,
   });
   final TextInputType keyboardType;
   final String hintText;
@@ -19,6 +20,8 @@ class CustomTextForm extends StatelessWidget {
   final String? Function(String?)? validator;
   final void Function(String)? onChanged;
   final bool readOnly;
+  final bool obscureText;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -27,10 +30,11 @@ class CustomTextForm extends StatelessWidget {
       onChanged: onChanged,
       readOnly: readOnly,
       keyboardType: keyboardType,
+      obscureText: obscureText,
       style: TextStyle(
         color: const Color(0xff2A2B2E),
         fontFamily: 'Inter',
-        fontSize: 14.sp,
+        fontSize: 16.sp,
         fontWeight: FontWeight.w400,
       ),
       decoration: InputDecoration(
@@ -42,6 +46,13 @@ class CustomTextForm extends StatelessWidget {
           fontWeight: FontWeight.w400,
         ),
         suffixIcon: suffixIcon,
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.r),
+          borderSide: BorderSide(
+            color: const Color.fromARGB(255, 80, 39, 55),
+            width: 1.sp,
+          ),
+        ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.r),
           borderSide: BorderSide(
